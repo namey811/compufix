@@ -13,11 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
+        /*
         $this->call([
             MoonShineUserSeeder::class,
         ]);
-
+        */
         $this->call([
             MarcaSeeder::class,
         ]);
@@ -29,16 +29,17 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TipoEquipoSeeder::class,
         ]);
+        
         /*
         User::factory()->create([
             'name' => 'Javier Luna',
-            'email' => 'jluna@gmail.com',
-            'password' => bcrypt('luna2025')
+            'email' => 'javierlunaster@gmail.com',
+            'password' => bcrypt('Luna2025')
         ]);
         User::factory()->create([
             'name' => 'Ivan Narvaez',
             'email' => 'namey811@gmail.com',
-            'password' => bcrypt('narvaez1989$')
+            'password' => bcrypt('Narvaez1989$')
         ]);
         */
     }

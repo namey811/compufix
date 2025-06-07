@@ -16,12 +16,15 @@ use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\Date;
 use MoonShine\UI\Fields\ID;
 use MoonShine\UI\Fields\Text;
+use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
 
 /**
  * @extends ModelResource<Periferico, PerifericoIndexPage, PerifericoFormPage, PerifericoDetailPage>
  */
 class PerifericoResource extends ModelResource
 {
+    use WithRolePermissions;
+    
     protected string $model = Periferico::class;
 
     protected string $title = 'Perifericos';

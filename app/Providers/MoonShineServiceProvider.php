@@ -18,6 +18,12 @@ use App\MoonShine\Resources\ClienteResource;
 use App\MoonShine\Resources\ProveedorResource;
 use App\MoonShine\Resources\IngresoEquipoResource;
 use App\MoonShine\Resources\SalidaEquipoResource;
+//use App\MoonShine\Resources\RoleResource;
+//use App\MoonShine\Resources\UserResource;
+
+use Sweet1s\MoonshineRBAC\Resource\PermissionResource;
+use Sweet1s\MoonshineRBAC\Resource\RoleResource;
+use Sweet1s\MoonshineRBAC\Resource\UserResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -41,6 +47,9 @@ class MoonShineServiceProvider extends ServiceProvider
                 ProveedorResource::class,
                 IngresoEquipoResource::class,
                 SalidaEquipoResource::class,
+                RoleResource::class,
+                UserResource::class,
+                PermissionResource::class,  // 
             ])
             ->pages([
                 ...$config->getPages(),

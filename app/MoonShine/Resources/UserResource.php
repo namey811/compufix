@@ -5,25 +5,27 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\SalidaEquipo;
+use App\Models\User;
 
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\ID;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
+
+use Sweet1s\MoonshineRBAC\Traits\WithRoleFormComponent;
 use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
 
 /**
- * @extends ModelResource<SalidaEquipo>
+ * @extends ModelResource<User>
  */
-class SalidaEquipoResource extends ModelResource
+class UserResource extends ModelResource
 {
     use WithRolePermissions;
-    
-    protected string $model = SalidaEquipo::class;
+    use WithRoleFormComponent;
+    protected string $model = User::class;
 
-    protected string $title = 'SalidaEquipos';
+    protected string $title = 'Users';
     
     /**
      * @return list<FieldContract>
@@ -58,7 +60,7 @@ class SalidaEquipoResource extends ModelResource
     }
 
     /**
-     * @param SalidaEquipo $item
+     * @param User $item
      *
      * @return array<string, string[]|string>
      * @see https://laravel.com/docs/validation#available-validation-rules

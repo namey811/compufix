@@ -14,12 +14,15 @@ use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Date;
 use MoonShine\UI\Fields\Text;
+use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
 
 /**
  * @extends ModelResource<TipoEquipo>
  */
 class TipoEquipoResource extends ModelResource
 {
+    use WithRolePermissions;
+    
     protected string $model = TipoEquipo::class;
 
     protected string $title = 'Tipo Equipos';

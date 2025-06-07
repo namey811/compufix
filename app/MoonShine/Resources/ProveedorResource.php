@@ -14,12 +14,15 @@ use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Email;
 use MoonShine\UI\Fields\Text;
+use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
 
 /**
  * @extends ModelResource<Proveedor>
  */
 class ProveedorResource extends ModelResource
 {
+    use WithRolePermissions;
+    
     protected string $model = Proveedor::class;
 
     protected string $title = 'Proveedores';

@@ -7,9 +7,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+ 
+use Sweet1s\MoonshineRBAC\Traits\MoonshineRBACHasRoles;
+
 class User extends Authenticatable 
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
+    use MoonshineRBACHasRoles;
+    const SUPER_ADMIN_ROLE_ID = 1;
+    
     use HasFactory, Notifiable;
 
     /**

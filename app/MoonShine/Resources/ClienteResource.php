@@ -15,11 +15,15 @@ use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Email;
 use MoonShine\UI\Fields\Text;
 
+use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
+
 /**
  * @extends ModelResource<Cliente>
  */
 class ClienteResource extends ModelResource
 {
+    use WithRolePermissions;
+    
     protected string $model = Cliente::class;
 
     protected string $title = 'Clientes';
