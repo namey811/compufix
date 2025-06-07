@@ -45,7 +45,7 @@ Actualmente nos encontramos en el desarrollo de la aplicacion, por lo que podemo
 ```sh 
 php artisan moonshine-rbac:install
 ```
-2. Creacion de usuarios
+2. Creacion de usuarios y asignacion de rol
 
 ```sh 
 php artisan moonshine-rbac:user
