@@ -56,22 +56,22 @@ final class MoonShineLayout extends AppLayout
     {
         return MenuRBAC::menu(
           //  ...parent::menu(),
-          MenuGroup::make('System', [
-            MenuItem::make('Admins', \Sweet1s\MoonshineRBAC\Resource\UserResource::class, 'users'),
-            MenuItem::make('Roles', \Sweet1s\MoonshineRBAC\Resource\RoleResource::class, 'shield-exclamation'),
-            MenuItem::make('Permissions', \Sweet1s\MoonshineRBAC\Resource\PermissionResource::class, 'shield-exclamation'),
-        ], 'user-group'),
+          MenuGroup::make('Sistema', [
+            MenuItem::make('Usuarios', \Sweet1s\MoonshineRBAC\Resource\UserResource::class, 'users'),
+            MenuItem::make('Roles', \Sweet1s\MoonshineRBAC\Resource\RoleResource::class, 's.shield-check'),
+            MenuItem::make('Permisos', \Sweet1s\MoonshineRBAC\Resource\PermissionResource::class, 'shield-exclamation'),
+        ], 's.cog'),
             MenuGroup::make('Maestros', [
-                MenuItem::make(trans('Marcas'), MarcaResource::class),
-                MenuItem::make('Perifericos', PerifericoResource::class),
-                MenuItem::make('Tipo Equipos', TipoEquipoResource::class),
+                MenuItem::make('Marcas', MarcaResource::class,'s.bar3'),
+                MenuItem::make('Perifericos', PerifericoResource::class,'s.cog'),
+                MenuItem::make('Tipo Equipos', TipoEquipoResource::class,'s.computer-desktop'),
             ],'s.table-cells'),
 
             MenuGroup::make('Gestion', [
-                MenuItem::make('Clientes', ClienteResource::class),
-                MenuItem::make('Proveedores', ProveedorResource::class),
-                MenuItem::make('Ingreso Equipos', IngresoEquipoResource::class),
-                MenuItem::make('Salida Equipos', SalidaEquipoResource::class),
+                MenuItem::make('Clientes', ClienteResource::class,'s.user'),
+                MenuItem::make('Proveedores', ProveedorResource::class,'s.wallet'),
+                MenuItem::make('Ingreso Equipos', IngresoEquipoResource::class,'s.wrench-screwdriver'),
+                MenuItem::make('Salida Equipos', SalidaEquipoResource::class,'s.tag'),
             ],'s.ticket'),
 
             MenuGroup::make('Reportes', [
@@ -80,7 +80,7 @@ final class MoonShineLayout extends AppLayout
                 MenuItem::make('Pago a terceros', '#', blank: true),
             ],'s.window'),
            
-            
+
 
 
 
